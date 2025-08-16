@@ -3,7 +3,7 @@ import React from "react";
 const CertificateText = () => {
   return (
     <>
-      <div className="mt-[100px] flex flex-col gap-4">
+      <div className="mt-[100px] flex flex-col gap-4 px-2">
         <h2 className="text-4xl text-cyan-400 text-center">Certification</h2>
         <p className="text-white text-center text-xl">
           Completed a 6-month Frontend Development course, gaining hands-on

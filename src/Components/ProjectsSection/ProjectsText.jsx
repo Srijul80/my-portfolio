@@ -3,7 +3,7 @@ import React from "react";
 const ProjectsText = () => {
   return (
     <>
-      <div className="mt-[100px] flex flex-col gap-4">
+      <div className="mt-[100px] flex flex-col gap-4 px-2">
         <h2 className="text-4xl text-cyan-400 text-center">Projects</h2>
         <p className="text-white text-center text-xl">
           Project will update soon

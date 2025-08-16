@@ -3,7 +3,7 @@ import React from "react";
 const SkillText = () => {
   return (
     <>
-      <div className="mt-[100px] flex flex-col gap-4">
+      <div className="mt-[100px] flex flex-col gap-4 px-2">
         <h2 className="text-4xl text-cyan-400 text-center">My Skills</h2>
         <p className="text-white text-center text-xl">
           I use HTML to build the structure of a website and CSS or Tailwind to

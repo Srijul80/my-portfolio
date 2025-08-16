@@ -3,6 +3,7 @@ import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
 import NavbarButton from "./NavbarButton";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
 
 const NavbarMain = () => {
   const [menu, setmenu] = useState(false);
@@ -21,10 +22,10 @@ const NavbarMain = () => {
         </div>
         <div className="flex items-center rounded-full border-1 border-orange-400 p-6 bg-black lg:hidden">
           <button
-            className="text-2xl rounded-full border border-orange-400 p-2 bg-black"
+            className="text-2xl rounded-full border border-orange-400 p-2 bg-black transition-all duration-300 ease-in-out"
             onClick={handletoggleMenu}
           >
-            <RxHamburgerMenu />
+            {menu ? <RxCross1 /> : <RxHamburgerMenu />}
           </button>
         </div>
       </nav>

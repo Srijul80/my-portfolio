@@ -9,13 +9,13 @@ const HeroPic = () => {
         <img
           src={myimg}
           alt="Rijul Sharma"
-          className="max-h-[350px] w-auto  "
+          className="max-h-[250px] w-auto md:max-h-[350px]  "
         />
 
         <div className="flex justify-center items-center animate-pulse absolute  ">
           <PiOctagonLight
             color="cyan"
-            className="  animate-[spin_20s_linear_infinite] blur-md w-auto  text-[470px] hidden sm:block "
+            className="  animate-[spin_20s_linear_infinite] blur-md w-auto  text-[370px] md:text-[470px] hidden sm:block "
           />
         </div>
       </div>
