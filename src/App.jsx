@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <>
-      <main className="font-body max-w-[1200px] mx-auto ">
+      <main className="font-body max-w-[1300px] mx-auto w-full ">
         <NavbarMain />
         <HeroMain />
         <AboutMeMain />

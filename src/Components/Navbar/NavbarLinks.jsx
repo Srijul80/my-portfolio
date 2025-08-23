@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-scroll";
-
 const NavbarLinks = () => {
   const Links = [
     { link: "About Me", Section: "about" },

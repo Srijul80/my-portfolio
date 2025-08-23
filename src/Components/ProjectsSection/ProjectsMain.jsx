@@ -2,8 +2,7 @@ import React from "react";
 import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
 import image1 from "../../Images/website-img-1.jpg";
-import FadeIn from "../../FramerMotion/variants";
-import { motion } from "framer-motion";
+
 const ProjectsMain = () => {
   const Projects = [
     {

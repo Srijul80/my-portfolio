@@ -3,7 +3,7 @@ import React from "react";
 const AboutMeText = () => {
   return (
     <>
-      <div className="px-2">
+      <div>
         <h1 className="text-4xl text-cyan-400">About Me</h1>
         <p className="mt-5 text-white text-xl">
           Hi, I’m Rijul Sharma from the beautiful hills of Himachal Pradesh. I’m
