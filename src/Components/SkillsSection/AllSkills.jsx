@@ -22,7 +22,7 @@ const AllSkills = () => {
             variants={FadeIn("left", `0.${index}`)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <SingleSkill key={index} skill={item.skill} icon={<item.icon />} />
           </motion.div>

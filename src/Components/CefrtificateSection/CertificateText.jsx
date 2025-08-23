@@ -8,7 +8,7 @@ const CertificateText = () => {
         variants={FadeIn("down", 0.2)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
         className="mt-[100px] flex flex-col gap-4 px-2"
       >
         <h2 className="text-4xl text-cyan-400 text-center">Certification</h2>

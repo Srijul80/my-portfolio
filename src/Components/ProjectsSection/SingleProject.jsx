@@ -9,7 +9,7 @@ const SingleProject = ({ name, year, image, align, link }) => {
         variants={FadeIn("up", 0.2)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
         className={`flex flex-col-reverse items-center gap-8 ${
           align === "left" ? "md:flex-row" : "md:flex-row-reverse"
         } justify-end mt-20 `}
