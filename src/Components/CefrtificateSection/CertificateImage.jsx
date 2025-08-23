@@ -9,7 +9,7 @@ const CertificateImage = () => {
         variants={FadeIn("up", 0.2)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: "auto" }}
+        viewport={{ once: false, amount: 0 }}
         className=" flex items-center justify-center w-full  mt-6 p-2 "
       >
         <a href={certificate} target="_blank">

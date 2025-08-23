@@ -28,12 +28,7 @@ const ProjectsMain = () => {
         <div>
           {Projects.map((item, index) => {
             return (
-              <motion.div
-                variants={FadeIn(`${item.align}`, 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: "auto" }}
-              >
+              <div>
                 <SingleProject
                   key={index}
                   name={item.name}
@@ -42,7 +37,7 @@ const ProjectsMain = () => {
                   image={item.image}
                   link={item.link}
                 />
-              </motion.div>
+              </div>
             );
           })}
         </div>

@@ -1,10 +1,15 @@
 import React from "react";
 import { BsArrowUpRightCircle } from "react-icons/bs";
-
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 const SingleProject = ({ name, year, image, align, link }) => {
   return (
     <>
-      <div
+      <motion.div
+        variants={FadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0 }}
         className={`flex flex-col-reverse items-center gap-8 ${
           align === "left" ? "md:flex-row" : "md:flex-row-reverse"
         } justify-end mt-20 `}
@@ -34,7 +39,7 @@ const SingleProject = ({ name, year, image, align, link }) => {
           <img src={image} alt="Project Image" className="w-full h-full " />
           <div className="h-full w-full bg-cyan-400 opacity-20 absolute top-0 left-0 hover:opacity-0 transition-all duration-300"></div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

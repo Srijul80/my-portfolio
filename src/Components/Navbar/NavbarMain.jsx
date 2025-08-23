@@ -18,10 +18,10 @@ const NavbarMain = () => {
         variants={FadeIn("down", 0.2)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-        className="max-w-[1300px]  w-full mx-auto px-4 fixed left-[50%] -translate-x-[50%] z-20 text-white flex gap-4"
+        viewport={{ once: false, amount: 0.3 }}
+        className="max-w-[1300px]  w-full mx-auto px-4 fixed left-[50%] -translate-x-[50%] z-20 text-white flex gap-4 h-[90px]"
       >
-        <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto border-[0.5px] border-orange-400 bg-black rounded-r-full rounded-l-full p-3">
+        <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto border-[0.5px] border-orange-400 bg-black rounded-r-full rounded-l-full px-2">
           <NavbarLogo />
           <div className={`${menu ? "block" : "hidden"} lg:block`}>
             <NavbarLinks />

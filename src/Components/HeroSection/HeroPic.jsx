@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const HeroPic = () => {
   return (
     <>
-      <motion.div
+      <motion.divs
         variants={FadeIn("left", 0.2)}
         initial="hidden"
         whileInView="show"
@@ -26,7 +26,7 @@ const HeroPic = () => {
             className="  animate-[spin_20s_linear_infinite] blur-md w-auto  text-[370px] md:text-[470px] hidden sm:block "
           />
         </div>
-      </motion.div>
+      </motion.divs>
     </>
   );
 };
