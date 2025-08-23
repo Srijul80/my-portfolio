@@ -2,7 +2,8 @@ import React from "react";
 import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
 import image1 from "../../Images/website-img-1.jpg";
-
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 const ProjectsMain = () => {
   const Projects = [
     {
@@ -27,14 +28,21 @@ const ProjectsMain = () => {
         <div>
           {Projects.map((item, index) => {
             return (
-              <SingleProject
-                key={index}
-                name={item.name}
-                year={item.Year}
-                align={item.align}
-                image={item.image}
-                link={item.link}
-              />
+              <motion.div
+                variants={FadeIn(`${item.align}`, 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: "auto" }}
+              >
+                <SingleProject
+                  key={index}
+                  name={item.name}
+                  year={item.Year}
+                  align={item.align}
+                  image={item.image}
+                  link={item.link}
+                />
+              </motion.div>
             );
           })}
         </div>

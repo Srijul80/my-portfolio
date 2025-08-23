@@ -4,6 +4,8 @@ import NavbarLinks from "./NavbarLinks";
 import NavbarButton from "./NavbarButton";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 
 const NavbarMain = () => {
   const [menu, setmenu] = useState(false);
@@ -12,7 +14,13 @@ const NavbarMain = () => {
   };
   return (
     <>
-      <nav className="max-w-[1300px]  w-full mx-auto px-4 fixed left-[50%] -translate-x-[50%] z-20 text-white flex gap-4">
+      <motion.nav
+        variants={FadeIn("down", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0 }}
+        className="max-w-[1300px]  w-full mx-auto px-4 fixed left-[50%] -translate-x-[50%] z-20 text-white flex gap-4"
+      >
         <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto border-[0.5px] border-orange-400 bg-black rounded-r-full rounded-l-full p-3">
           <NavbarLogo />
           <div className={`${menu ? "block" : "hidden"} lg:block`}>
@@ -28,7 +36,7 @@ const NavbarMain = () => {
             {menu ? <RxCross1 /> : <RxHamburgerMenu />}
           </button>
         </div>
-      </nav>
+      </motion.nav>
     </>
   );
 };

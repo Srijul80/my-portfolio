@@ -2,6 +2,8 @@ import React from "react";
 import SingleSkill from "./SingleSkill";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 
 const AllSkills = () => {
   const skills = [
@@ -16,7 +18,14 @@ const AllSkills = () => {
     <>
       <div className="flex justify-center gap-2">
         {skills.map((item, index) => (
-          <SingleSkill key={index} skill={item.skill} icon={<item.icon />} />
+          <motion.div
+            variants={FadeIn("left", `0.${index}`)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: "auto" }}
+          >
+            <SingleSkill key={index} skill={item.skill} icon={<item.icon />} />
+          </motion.div>
         ))}
       </div>
     </>

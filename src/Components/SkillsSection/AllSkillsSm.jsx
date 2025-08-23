@@ -1,6 +1,8 @@
 import React from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaBootstrap } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 
 const AllSkillsSm = () => {
   const skills = [
@@ -16,13 +18,17 @@ const AllSkillsSm = () => {
       <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-5 mt-10">
         {skills.map((item, index) => {
           return (
-            <div
+            <motion.div
+              variants={FadeIn("up", 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "auto" }}
               key={index}
               className="flex items-center justify-center flex-col gap-4"
             >
               <div className="text-4xl text-orange-400">{<item.icon />}</div>
               <h2 className="text-white">{item.skill}</h2>
-            </div>
+            </motion.div>
           );
         })}
       </div>

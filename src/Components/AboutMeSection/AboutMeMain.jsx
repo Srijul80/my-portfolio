@@ -1,6 +1,8 @@
 import React from "react";
 import AboutMeText from "./AboutMeText";
 import AboutMeImage from "./AboutMeImage";
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 
 const AboutMeMain = () => {
   return (
@@ -9,12 +11,24 @@ const AboutMeMain = () => {
         id="about"
         className="flex flex-col md:flex-row gap-10 justify-center items-center text-center md:text-left  py-5 "
       >
-        <div>
+        {/* About Text  */}
+        <motion.div
+          variants={FadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: "auto" }}
+        >
           <AboutMeText />
-        </div>
-        <div>
+        </motion.div>
+        {/* About Image  */}
+        <motion.div
+          variants={FadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: "auto" }}
+        >
           <AboutMeImage />
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -1,11 +1,19 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import myResume from "../../Files/Rijul-Resume.pdf";
+import FadeIn from "../../FramerMotion/variants";
+import { motion } from "framer-motion";
 
 const HeroText = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 h-full justify-center items-center md:items-start  md:text-left text-center ">
+      <motion.div
+        variants={FadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+        className="flex flex-col gap-4 h-full justify-center items-center md:items-start  md:text-left text-center "
+      >
         <h2 className="lg:text-2xl text-xl text-cyan-400 uppercase">
           <Typewriter
             options={{
@@ -28,7 +36,7 @@ const HeroText = () => {
             Download CV
           </a>
         </button>
-      </div>
+      </motion.div>
     </>
   );
 };
