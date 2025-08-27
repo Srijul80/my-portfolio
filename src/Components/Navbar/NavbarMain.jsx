@@ -24,7 +24,7 @@ const NavbarMain = () => {
         <div className="flex justify-between items-center w-full max-w-[1300px] mx-auto border-[0.5px] border-orange-400 bg-black rounded-r-full rounded-l-full px-2">
           <NavbarLogo />
           <div className={`${menu ? "block" : "hidden"} lg:block`}>
-            <NavbarLinks />
+            <NavbarLinks setmenu={setmenu} menu={menu} />
           </div>
           <NavbarButton />
         </div>

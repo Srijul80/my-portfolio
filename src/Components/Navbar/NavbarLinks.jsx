@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-const NavbarLinks = () => {
+const NavbarLinks = ({ setmenu, menu }) => {
   const Links = [
     { link: "About Me", Section: "about" },
     { link: "Skills", Section: "skill" },
@@ -20,6 +20,9 @@ const NavbarLinks = () => {
                 duration={300}
                 offset={-100}
                 className="cursor-pointer hover:text-cyan-400"
+                onClick={() => {
+                  setmenu(!menu);
+                }}
               >
                 {link.link}
               </Link>
