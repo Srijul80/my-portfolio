@@ -6,11 +6,11 @@ import image1 from "../../Images/website-img-1.jpg";
 const ProjectsMain = () => {
   const Projects = [
     {
-      name: "Demo Project",
+      name: "Front-end Ecom Site",
       Year: "2025",
       align: "right",
       image: image1,
-      link: "#",
+      link: "https://ecommerce-frontend-qxja.vercel.app/",
     },
     {
       name: "Demo Project",
