@@ -2,6 +2,7 @@ import React from "react";
 import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
 import image1 from "../../Images/website-img-1.jpg";
+import image2 from "../../Images/website-img-2.jpg";
 
 const ProjectsMain = () => {
   const Projects = [
@@ -16,7 +17,7 @@ const ProjectsMain = () => {
       name: "Demo Project",
       Year: "2025",
       align: "left",
-      image: image1,
+      image: image2,
       link: "#",
     },
   ];
