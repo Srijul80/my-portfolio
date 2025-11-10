@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
-import image1 from "../../Images/website-img-1.jpg";
-import image2 from "../../Images/website-img-2.jpg";
+import image1 from "../../Images/webiste-img-1.png";
+import image2 from "../../Images/website-img-2.webp";
 
 const ProjectsMain = () => {
   const Projects = [
